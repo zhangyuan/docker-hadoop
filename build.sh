@@ -12,7 +12,7 @@ REVISION=$TRAVIS_COMMIT
 
 docker build -f Dockerfile -t $REPO:$REVISION .
 docker tag $REPO:$REVISION $REPO:latest
-docker tag $REPO:$REVISION $REPO:$VERSION
+docker tag $REPO:$REVISION $REPO:build-$VERSION
 docker tag $REPO:$REVISION $REPO:2.9.2
 
 docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
