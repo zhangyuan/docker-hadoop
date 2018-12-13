@@ -3,7 +3,7 @@ FROM openjdk:8-jdk
 RUN apt-get update && apt-get -y install openssh-server rsync
 
 RUN wget https://www-us.apache.org/dist/hadoop/common/stable/hadoop-2.9.2.tar.gz && \
-    tar zxvf hadoop-2.9.2.tar.gz && rm hadoop-2.9.2.tar.gz && mv hadoop-2.9.2 /hadoop
+    tar zxf hadoop-2.9.2.tar.gz && rm hadoop-2.9.2.tar.gz && mv hadoop-2.9.2 /hadoop
 
 RUN echo export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 >> etc/hadoop/hadoop-env.sh
 
